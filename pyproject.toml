@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flake-latest-release"
+version = "0.1.0"
+description = "Check or pin Nix flake inputs against each repo's latest stable GitHub release"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+flake-latest-release = "flake_latest_release.cli:main"
+
+[tool.setuptools]
+packages = ["flake_latest_release"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
